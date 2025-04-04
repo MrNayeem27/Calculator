@@ -1,0 +1,111 @@
+body {
+    background-color: hsl(222, 26%, 31%); /* Example theme color */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calculator-container {
+    width: 90%;
+    max-width: 450px; /* Max width for larger screens */
+    padding: 20px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.display input {
+    background-color: hsl(224, 36%, 15%); /* Darker background for display */
+    color: white;
+    text-align: right;
+    font-size: 2.5rem; /* Relative font size */
+    border: none;
+    border-radius: 10px;
+    width: 100%; /* Take full width of container */
+    padding: 15px 20px;
+    box-sizing: border-box; /* Include padding in width */
+    margin-bottom: 20px;
+    height: 70px;
+    overflow: hidden; /* Hide overflow */
+}
+
+.keypad {
+    background-color: hsl(223, 31%, 20%); /* Keypad background */
+    border-radius: 10px;
+    padding: 20px;
+    gap: 15px; /* Spacing between buttons */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Flexible columns */
+    box-sizing: border-box;
+}
+
+button {
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.4rem; /* Relative font size */
+    cursor: pointer;
+    background-color: hsl(30, 25%, 89%); /* Light key background */
+    color: hsl(221, 14%, 31%); /* Dark text */
+    box-shadow: 0 4px hsl(28, 16%, 65%); /* Key shadow */
+    transition: background-color 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: hsl(0, 0%, 100%); /* Lighter on hover */
+}
+
+button:active {
+    transform: translateY(2px); /* Press effect */
+    box-shadow: 0 2px hsl(28, 16%, 65%);
+}
+
+.btn-delete,
+.btn-reset {
+    background-color: hsl(225, 21%, 49%); /* Blue background */
+    color: white;
+    box-shadow: 0 4px hsl(224, 28%, 35%); /* Blue shadow */
+    font-size: 1.1rem; /* Slightly smaller font for text */
+}
+
+.btn-delete:hover,
+.btn-reset:hover {
+    background-color: hsl(225, 21%, 65%);
+}
+
+.btn-delete:active,
+.btn-reset:active {
+     box-shadow: 0 2px hsl(224, 28%, 35%);
+     transform: translateY(2px);
+}
+
+.btn-equals {
+    background-color: hsl(6, 63%, 50%); /* Red background */
+    color: white;
+    box-shadow: 0 4px hsl(6, 70%, 34%); /* Red shadow */
+}
+
+.btn-equals:hover {
+     background-color: hsl(6, 63%, 65%);
+}
+
+.btn-equals:active {
+     box-shadow: 0 2px hsl(6, 70%, 34%);
+     transform: translateY(2px);
+}
+
+
+/* Spanning buttons */
+.btn-reset {
+    grid-column: span 2; /* Correct span syntax */
+}
+
+.btn-equals {
+    grid-column: span 2; /* Correct span syntax */
+}
